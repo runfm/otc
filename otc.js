@@ -184,13 +184,6 @@ var otCustom = {
                 this.__value__ = value;
 
                 if (this.validationRule && this.validationRule.Type) {
-/*                     if (this.validationRule.Type == "Regex") {
-                        var rg = new RegExp(this.validationRule.Query, "gim")
-                        this.SetIsValid(!!value.match(rg))
-                    }
-                    if (this.validationRule.Type == "Exec") {
-                        self.isValid = eval(this.validationRule.Query)
-                    } */
 
                     switch (this.validationRule.Type) {
                         case "Regex":
