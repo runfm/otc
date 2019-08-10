@@ -1,0 +1,1871 @@
+﻿@font-face {
+    font-family: "awesome"; 
+    src:  url("fontawesome-webfont.woff") format("woff");
+}
+@font-face {
+	font-family: "OpenSansLight"; 
+    src: url("omnitracker.custom.min/fonts/woff/OpenSansLight.woff") format("woff");
+} 
+@font-face {
+	font-family: "OpenSansRegular"; 
+    src: url('omnitracker.custom.min/fonts/woff/OpenSansRegular.woff') format('woff'); 
+}
+
+/* general */
+#of-div > div > div.of-section-content-wrapper > div > div > div > div.form-field-control-wrapper > div.fieldvalue.form-field-control > div.ofctrl-radiobuttons-container > span:nth-child(1),
+#of-div > div > div.of-section-content-wrapper > div > div > div > div.form-field-control-wrapper > div.fieldvalue.form-field-control > div.ofctrl-radiobuttons-container > span:nth-child(5){
+	display:none;
+}
+input::-ms-clear {
+    display: none;
+}
+[hidden]{
+    display: none !important;
+}
+.wgcXSLT{
+    padding-left:10px;
+    overflow-y: visible;
+}
+div:not(#divWebGridControl) > [name=wgc_div]{
+    overflow: visible !important;
+}
+.ff-left .form-field-label{
+    line-height: normal;
+    white-space: normal;
+}
+/* #LogoutTimerText, */
+#divMainContent > nav,
+#iframelayercontent #pnlPanesControl,
+/* .header-cell-search */{
+	display:none ;
+}
+#MainButtonBar_pnlMainButtonBar{
+	display:none!important;
+}
+/* sf */
+
+.sfdivddl,.sfdiv,.attachment-table-wrapper{
+    border: 1px solid lightgrey !important;
+}
+.sfdivddl > *,.sfdiv > *{
+    border: none !important;
+}
+
+.attachment-table-wrapper{
+	min-height: 100px;
+}
+
+#otwgc,
+.k-shortcutbar,
+#pnlHeaderShortcutbar > div > div{
+	background-color: white;
+}
+.refToObjTd2rdo,.refToObjTd2 {
+	width: 2.4rem;
+}
+td.refToObjTd2 > div.refToObjBtnDiv > div.split-button-container,
+td.refToObjTd2rdo > div.refToObjBtnDiv{
+	border:1px solid lightgrey;
+	border-left:none;
+}
+
+/* shortcut bar */
+.sc-group{
+	background-color: white;
+	font-weight:bold;
+	padding-left:18px;
+}
+.k-shortcutbar .k-item{
+	background-color: white;
+	border-top: 0px;
+}
+.sc-group:hover,
+ .sc-link:hover {
+    background-color: white ;
+	color:#e21e24;
+}
+.k-state-selected .sc-link {
+    background-color: #d70f0f !important;
+    color: white;
+}
+.sc-link{
+	padding-left: 25px;
+	background-image:none !important;
+}
+/* shortcut bar - end */
+#pnlObject{
+	padding: 0rem 3.08rem 0rem 1em;
+}
+.whitespace-div{
+	height: 0em;
+}
+table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(3) > td > table{
+    margin-top: 15px;	
+}
+.SFLabelCell{
+	width:0px;
+}
+.ff-text-field{
+	border:1px solid lightgrey;
+}
+
+/* object-buttons */
+
+
+[id*='btnOK'] > div,#btnSave > div,[id*='btnCancel'] > div{
+	background-image: none;
+	padding: 0;
+	height: 3em;
+    line-height: 3em;
+}
+[id*='btnOK'],#btnSave,[id*='btnCancel']{
+	min-width:100px;
+	border: 1px solid lightgrey;
+    margin-right: 10px;
+	text-transform: none;
+	border-radius: 4px;
+}
+[id*='btnOK']{
+    border: 1px solid #008bC9 !important;
+    background: #008bC9 !important;
+    color: white !important;
+	line-height: normal !important;
+}
+[id*='btnCancel']{
+	background-color: #e6e7e7;
+}
+
+#btnNew > div,
+#btnPrint > div,
+#btnView > div {
+    background-size: 1.6em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+.div-pane-panel{
+    border: 0px !important;
+    margin-top: 50px 
+}
+#pnlHeaderShortcutbar{
+	border-bottom: 0px !important;
+	background-color:white !important;
+}
+#pnlMainHeader{
+    display: none !important
+}
+
+.PnlStatusBarHidden{
+	display:none !important;
+}
+.wgcCopyTextHidden{
+	display: none;
+}
+.otCustomWidthResizer{
+    cursor: e-resize;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    width: 4px;
+    height: 100%;
+}
+.otCustomWidthResizer:hover{
+	width: 7px;
+	background:  #d5d2d0;
+}
+.country-icon{
+    height: 25px;
+    width: 50px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 22px;
+}
+.country-icon:hover{
+	background-color: lightgrey
+}
+
+.otc-lang-flag{
+        /* background: aliceblue; */
+        width: 30px;
+        margin-right: 5px;
+        /* height: 100%; */
+        /* display: inline-block; */
+
+        background-repeat: no-repeat;
+        background-position-y: -1px;
+}
+.otc-lang-flag-ru{
+    background-image: url(omnitracker.custom.min/img/228-russia.svg);
+}
+.otc-lang-flag-en{
+    background-image: url(omnitracker.custom.min/img/262-united-kingdom.svg);
+}
+
+.country-icon-ru{
+	background-image: url(omnitracker.custom.min/img/russia.svg);
+}
+.country-icon-en{
+	background-image: url(omnitracker.custom.min/img/united-kingdom.svg);
+}
+
+.selectionAffected{
+	-ms-user-select:none;
+	user-select: none;
+	-moz-user-select:none;
+}
+.ot-custom-hidden-links-show{
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    height: 30px;
+    width: 50px;
+    justify-content: center;
+    border: 1px solid white
+}
+.ot-custom-hidden-links-show:hover{
+    border: 1px solid aliceblue;
+}
+.ot-custom-hidden-items-list{
+    list-style-type: none;
+    position: absolute;
+    z-index: 1;
+    padding: 0px 15px;
+    margin-top: 45px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+ul.ot-custom-hidden-items-list > a {
+    display: block;
+    padding: 9px 0px;
+    margin: 0px;
+}
+.ot-custom-hidden-links-container{
+    display: flex;
+    position: relative;
+}
+
+.otPortalLinksContainer{
+    flex-grow: 1;
+    max-width: 1715px;
+    white-space: nowrap;
+    overflow: hidden;
+    align-self: center;
+}
+#mainPageHref{
+    height: 100%;
+    display: block
+}
+.OtGDCPortalLink{
+	display:inline-block;
+	margin-right:20px;
+	font-size: 14px;
+}
+.OtGDCPortalLink:hover{
+	color:#0091ea !important;
+}
+#shortcutsToggler{
+    font-size: 21px;
+    cursor: pointer;
+    font-family: awesome;
+    display: inline-block;
+}
+#shortcutsToggler:before{
+	content: "\F0C9";
+	display: block
+}
+#otc-main-page-breadcrumb{
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 14px
+}
+
+div#otc-main-page-breadcrumb:before {
+    content: "\F122";
+    font-family: awesome;
+    padding-right: 5px;
+}
+#otc-guest-login-info:hover,
+#otc-switch-lang-btn-container:hover,
+a.ot-custom-href:hover {
+    color: #e31e24;
+}
+#otc-ssp-txt-wrapper {
+    display: flex;
+    margin-bottom: 10px
+}
+#shortcutsToggler:hover,
+div#otc-main-page-breadcrumb:hover,
+#otc-main-page-breadcrumb:hover > * {
+    color: #e31e24;
+}
+
+/* ssp - new ticket */
+
+.OTCustomFieldDescription a{
+	color:#0091ea;
+}
+.OTCustomFieldDescription a:hover{
+	text-decoration: underline;
+}
+.OTCustomFieldDescription{
+    margin-top:10px;
+    line-height: normal;
+    font-family: "Roboto","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    white-space: pre-line;
+}
+#FormNoteText{
+	line-height: normal;
+}
+
+/* ssp-mainform */
+
+#ot-custom-search-wrapper{
+    margin: 10px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+.otc-service-tile {
+    width: 200px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    border-radius: 2px;
+    margin: 10px;
+    position: relative;
+}
+.otc-service-tile:hover{
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+.otc-service-tile:hover .otc-containers-buttons-container{
+    display: block
+}
+.otc-open-href{
+    display: block
+}
+.TitleContainer{
+    height: 30px;
+    padding: 15px 0px;
+    margin: 0px 10px;
+    position: relative;
+    background: white;
+    cursor: pointer;
+}
+
+.otc-container-button {
+    margin: 10px;
+    border: 1px solid lightgrey;
+    padding: 10px 0px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.TitleContainer::before{
+    align-items: center;
+    font-family: awesome;
+    font-size: 20px;
+    position: absolute;
+    height: 30px;
+    display: flex;
+}
+
+.otCustom-ContainerTitle:before {
+    font-family: awesome;
+    margin-right: 5px;
+}
+
+.otCustom-ContainerTitle.HRTile:before,
+.HRTile .TitleContainer::before{
+    content: "\F0C0"
+}
+.otCustom-ContainerTitle.ITTile:before,
+.ITTile .TitleContainer::before{
+    content: "\F26C"
+}
+.otCustom-ContainerTitle.FnLTile:before,
+.FnLTile .TitleContainer::before{
+    content: "\F0E3"
+}
+.otCustom-ContainerTitle.AdmsTile:before,
+.AdmsTile .TitleContainer::before{
+    content: "\F0AD"
+}
+.otCustom-ContainerTitle.ISMTile:before,
+.ISMTile .TitleContainer::before{
+    content: "\F132"
+}
+.otCustom-ContainerTitle.BATile:before,
+.BATile .TitleContainer::before{
+    content: "\F201"
+}
+.otCustom-ContainerTitle.SPCCTile:before,
+.SPCCTile .TitleContainer::before{
+    content: "\F21E"
+}
+.otc-container-button {
+    margin: 10px;
+    border: 1px solid lightgrey;
+    padding: 10px 0px;
+    border-radius: 2px;
+}
+.otc-containers-buttons-container{
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    display: none;
+    left: 5px;
+    right: 5px;
+}
+.TileTitle{
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0px 18px
+}   
+.otc-container-button:hover{
+    background: ghostwhite
+}
+.ServiceTiles{
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start
+}
+.ServiceSelector > p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.ServiceSelector{
+    margin-top: 60px;
+}
+.otCustomSpointServicesContainer{
+    display: flex;    
+     flex-wrap: wrap;
+}
+.img-attachment-new {
+    background-image: url(omnitracker.custom.min/img/baseline-attach_file-24px.svg);
+}
+#ot-custom-search-wrapper  .ot-custom-state-container{
+    display: none
+}
+.BackgroundContainer{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: normal;
+}
+.ServiceElement{
+	white-space: normal;
+}
+.Subservices pre{
+	font-size:13px;
+	color:black;
+	white-space: pre-line;
+	font-family: 'OpenSansLight', sans-serif;
+	margin: 0px;
+}
+.otCustomSearchPanel{
+	position:relative;
+	margin:10px;
+    margin-right:40px;
+    margin-bottom:30px;
+}
+.otCustomSearchPanel > input{
+	margin: auto;
+    width: 100%;
+    display: block;
+	border: 1px solid lightgrey;
+}
+.ExternalLinkIndicator{
+	margin-left: 5px;
+}
+i.ExternalLinkIndicator:after{
+    content: "\F1D9";
+    font-family: awesome;
+}
+.OTCustomFieldContainer {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 49%;
+    min-width: 360px;
+    padding: 0px 20px;
+    /* flex-basis: 360px; */
+    flex-grow: 1;
+}
+.OTCustomFieldHeader{
+    font-weight: bold;
+    line-height: 25px;
+    color: #263238;
+    margin-bottom: 10px;
+}
+.Subservices{
+	list-style: square outside;
+	margin: 5px;
+    padding-left: 15px;
+}
+.Subservices > li {
+    margin-left: 10px;
+    line-height: 25px;
+    color: #e30613;
+	margin-bottom:15px;
+	font-size:20px;
+}
+.Subservices > li  span{
+	color:black;
+	font-size:13px;
+}		
+.ServiceElement{
+    font-family: 'OpenSansRegular', sans-serif; 
+    font-size: 13px;
+    color: #0091ea;
+}
+.Subservices > li  a:hover, .Subservices > li  a:active {
+    text-decoration: underline;
+}
+.SubserviceTile{
+	margin-bottom:15px;
+	width:49%;
+}
+.SubclassHDR{
+	font-weight:normal;
+	font-size:1em;
+	margin:0px;
+}
+.SearchResultsContainer{
+	position:absolute;
+	border: 1px solid lightgrey;
+    box-shadow: 0 10px 18px 0 rgba(88,112,118,.35);
+	background:white;
+	border-top: 0px;
+}
+.SearchResultsContainer .GroupContainer >  .GroupServices > div:hover{
+    background:aliceblue;
+}
+.resultsStatisticsContainer{
+	font-size:13px;
+    padding:10px;
+    border-top: 1px solid lightgrey;
+}
+.SearchResultsContainer .GroupContainer >  .GroupServices > div{
+	height:30px;
+	display: flex;
+    align-items: center;
+	padding-left:20px;
+	padding-right:20px;
+}
+.GroupContainer{
+	display:flex;
+	border-bottom:1px solid lightgrey;
+}
+.GroupContainer:last-child{
+    border-bottom:0px;
+}
+.GroupTitle{
+    padding: 10px;
+    border-right: 1px solid lightgrey;
+    width: 160px;
+    overflow-x: hidden;
+    min-width: 160px;
+}
+.GroupServices{
+	width:100%
+}
+.otCustom-ContainerTitle{
+    font-size: 2.3em;
+    margin: 20px 0px;
+    line-height: normal
+}
+.resultGroupsContainer{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* controls-v3 */
+
+
+.ot-custom-wrapper{
+    display: flex;
+}
+.ot-custom-state-container{
+    font-family: "awesome"; 
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin: 0px 6px;
+    min-width: 24px;
+}
+.ot-custom-state-container.ot-custom-validated-true:after{
+    content: "\F058";
+    color: green;
+}
+.ot-custom-state-container.ot-custom-validated-false:after{
+    content: "\F057";
+    color: red;
+}
+.ot-custom-mandatory-container:after{
+    content: "\F06A";
+    color: orange;
+}
+.otCustom-container{
+    width: 100%;
+    border: 0px solid lightgrey;
+    font-family: tahoma;
+    background-color: #fefefe;
+    font-size: 14px
+}
+.otCustom-container:hover{
+    border-color: #bfbfbf
+}
+
+.otCustom-input-wrapper{
+    border-radius: 2px;
+    border-width: 1px !important;
+}
+.dropDownContainer,
+.ot-custom-memo-wrapper,{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+/* dropDownControl */
+.dropDownListWrapper{
+    width: 100%;
+    border-width: 0px;
+    border-top: 0px;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 1;
+    border: inherit;
+}
+.dropDownList{
+    border: inherit;
+    border-width: 1px;
+    border-top: 0px;
+    width: calc(100% - 16px);
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    background-color: white;
+    line-height: normal;
+    font-weight: normal;
+}
+.dropDownContainer{
+    outline: 0px;
+    position: relative;
+}
+.dropDownInputWrapper{
+    border: inherit;
+    box-sizing: border-box;
+    display: flex;
+}
+.dropDownSelectedItem{
+    flex-grow: 1;
+    min-height: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    font-size: 15px;
+    align-items: center;
+}
+.dropDownToggler{
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropDownToggler:after {
+    width: 0;
+    border-style: solid;
+    border-width: 7px 4px 0 4px;
+    border-color: lightgrey transparent transparent transparent;
+    content: " ";
+    display: block;
+}
+
+/* combo */
+.otCustomDropDownTextInput{
+    height: 32px;
+    border: none;
+    flex-grow: 1;
+    background-color: transparent; 
+    font-size: 15px;
+}
+.dropDownListItemsContainer{
+    max-height: 300px;
+    overflow-y: auto;
+}
+.dropDownListItemsState{
+    padding: 5px 10px;
+    border-top: 1px solid lightgrey;
+    background-color: snow;
+    cursor: default;
+    font-size: 12px;
+}
+.otCustom-DropDownGroupTitle, .dropDownListItemsContainer > div{
+    padding: 10px;
+    cursor: default;
+    font-size: 14px;
+}
+.ot-custom-DropDownAdditionalText{
+    color: rgb(202, 41, 73);
+    font-style: italic;
+    font-size: 12px;
+}
+.otCustom-DropDownItemHover{
+    background: aliceblue;
+}
+.otCustom-DropDownGroupTitle{
+    font-weight: bold;
+    color: #6cbdff;
+    padding-bottom: 5px;
+}
+.otCustom-DropDownGroupItems > div{
+    padding-left: 20px;
+}
+.otCustomSelectedOption {
+    border: 1px solid #cee0ed;
+    background-color: #f3faff;
+    align-items: center;
+    padding: 4px 10px 4px 10px;
+    margin: 5px 5px 5px 0px;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    color: #33658a;
+    font-size: 12px;
+}
+[ot-custom-searchfailed] .dropDownInputWrapper{
+    background-color: rgb(255, 236, 236);
+}
+/* Calendar */
+.ot-custom-date-daycell {
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    display: flex;
+    cursor: default;
+    min-width: 16px;
+    position: relative;
+    flex-basis: 1px;
+}
+.ot-custom-date-weeks-container{
+    height: 30px;
+    display: flex;
+}
+.ot-custom-DatePicker-MonthSelector{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0px 10px 0px 10px;
+    border-bottom: inherit;
+}
+.ot-custom-DatePicker-BottomContainer {
+    align-items: center;
+    display: flex;
+    border: inherit;
+    border-width: 0px;
+    justify-content: space-around;
+    font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+}
+.ot-custom-date-selector{
+    border-top: inherit;
+}
+.PrevMonth {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 15px solid lightgray;
+    border-bottom: 8px solid transparent;
+}
+.NextMonth {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 15px solid lightgray;
+    border-bottom: 8px solid transparent;
+}
+.NextMonth:hover{
+    border-left: 15px solid grey;
+}
+.PrevMonth:hover {
+    border-right: 15px solid grey;
+}
+.daynames{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #FF9A19;
+}
+.ot-custom-DatePicker-CurrentMonthHeader{
+    text-transform: capitalize;
+}
+[weekend] {
+    color: rgb(247, 104, 104);
+}
+.validday:hover{
+    background: #b1dcfb;
+}
+[today]::before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 0.5em solid #0059bc;
+    border-left: .5em solid transparent;
+}
+.ot-custom-DatePicker-BottomContainer > * {
+    border: inherit;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.dropDownContainer:not(.multiple-true) .ot-custom-DatePicker-BottomContainer > *:hover {
+    background-color: aliceblue;
+}
+.multiple-true .ot-custom-DatePicker-TodayButton,
+.multiple-true .otc-time-input__wrapper > .otc-number__input,
+.multiple-true span{
+    color: lightgrey;
+}
+.ot-custom-DatePicker-BottomContainer > input{
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    background: transparent;
+    border: 0px;
+}
+.ot-custom-DatePicker-BottomContainer > div > div {
+    align-items: center;
+    border: inherit;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0px;
+    height: 25px;
+}
+.ot-custom-DatePicker-BottomContainer > div:first-child > div:first-child{
+    border-right-width: 1px !important;
+}
+.ot-custom-date-time-wrapper > input{
+    width: 30px;
+    text-align: center;
+    border: 0px;
+    background: transparent;
+    font-size: 15px;
+}
+.ot-custom-DatePicker-TodayButton{
+    cursor: default;
+}
+div[date-selected],
+[date-selected-second]{
+    background: #b2d4fc;
+}
+div[date-selected]:hover,
+[date-selected-second]:hover{
+    background: #84bdff;
+}
+.ot-custom-date-middle-container{
+    border-bottom: inherit;
+}
+/* resizable */
+.ot-custom-resizable{
+    position: relative;
+}
+.ot-custom-resizer{
+    background: transparent;
+    position: absolute;
+    height: 20px;
+    right: 0px;
+    left: 0px;
+    bottom: -5px;
+    cursor: n-resize;
+}
+/* memo */
+.ot-custom-memo-tools{
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    border-bottom: inherit;
+    padding-left: 3px;
+    background: #fdfdfd;
+}
+.ot-custom-memo-editor{
+    overflow-y: auto;
+    word-wrap: break-word;
+    min-height: 6em;
+    padding: 5px
+}
+.ot-custom-editor-toolbarBtn{
+    height: 100%;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    outline: 0px !important;
+    font-family: awesome
+} 
+[command='bold']:before{
+    content: "\F032";
+}
+[command='italic']:before{
+    content: "\F033";
+}
+[command='strikeThrough']:before{
+    content: "\F0CC";
+}
+[command='underline']:before{
+    content: "\F0CD";
+}
+[command='insertOrderedList']:before{
+    content: "\F0CA";
+}
+[command='insertUnorderedList']:before{
+    content: "\F0CB";
+}
+[command='insertImage']:before{
+    content: "\F03E";
+}
+[command='justifyLeft']:before{
+    content: "\F036";
+}
+[command='justifyCenter']:before{
+    content: "\F037";
+}
+[command='justifyRight']:before{
+    content: "\F038";
+}
+[command='justifyFull']:before{
+    content: "\F039";
+}
+.ot-custom-editor-toolbarBtn:hover{
+    background-color: ghostwhite;
+}
+.ot-custom-editor-toolbarBtn[activated]{
+    background-color: aliceblue;
+}
+.ot-custom-memo-separator {
+    border-left: 1px solid lightgrey;
+    height: 60%;
+}
+/* choice */
+.ot-custom-choice-TextInput{
+    border: 1px solid lightgrey;
+    height: 28px;
+    border-radius: 3px;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+.ot-custom-choice-wrapper > div{
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+}
+.ot-custom-choice-wrapper > div:hover{
+    background-color: aliceblue
+}
+/* text */
+.ot-custom-text{
+    height: 34px;
+}
+/* grid */
+
+.ot-custom-large-grid{
+    width:100%;
+}
+.ot-custom-grid-data-cell .ot-custom-state-container{
+    display: none;
+}
+.ot-custom-grid-data-cell .otCustom-input-wrapper{
+    border: 0px;
+}
+.ot-custom-grid-data-cell .dropDownList {
+    width: 100%
+}
+.ot-custom-grid-container{
+    position: relative;
+    padding-bottom: 5px;
+    transition: padding-bottom 0.3s;
+}
+[ot-custom-grid-has-selected-rows],
+.ot-custom-grid-container:hover {
+    padding-bottom: 50px;
+    transition: padding-bottom 0.3s;
+}
+[ot-custom-grid-has-selected-rows] .ot-custom-grid-buttons,
+.ot-custom-grid-container:hover .ot-custom-grid-buttons{
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+.ot-custom-grid-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.ot-custom-grid-buttons{  
+    position: absolute;  
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.ot-custom-grid-buttons > div{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    margin-left: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.ot-custom-grid-buttons-add{
+    background-color: #008bc9;
+}
+.ot-custom-grid-buttons-rm{
+    background-color: #e6e7e7;
+    border: 1px solid lightgrey;
+}
+.ot-custom-grid-header-row{
+    border-bottom: 1px solid lightgrey;
+    padding: 8px 0px
+}
+.ot-custom-grid-buttons-add:after {
+    content: "+";
+    font-family: awesome;
+    display: block;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+}
+.ot-custom-grid-buttons-rm:after {
+    content: "\F014";
+    font-family: awesome;
+    font-size: 19px;
+    display: block;
+}
+.ot-custom-grid-data-cell{
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    background-color: transparent
+}
+.ot-custom-grid-data-cell:last-child{
+    border-right: 0px
+}
+.ot-custom-grid-data-cell > input{
+    width: 100%;
+    height: 32px;
+    border: 0px;
+    text-overflow: ellipsis;
+    background-color: transparent;
+}
+[ot-custom-grid-row-selected]{
+    background-color: aliceblue
+}
+
+/* controls-end */
+
+[title=NEW_TICKET_DESCRIPTION] + div,
+[title=Storage] + div,
+[title=CUSTOM_FIELDS_BINDING_CONTAINER] + div{
+    display: none;
+}
+
+#sf{
+    overflow: visible;
+    padding: 0px;
+    width: 100%
+}
+
+#welcomeDesciption {
+    display: none;
+    font-size: 14px;
+    line-height: 1.5em;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    margin-right: 40px;
+}
+
+#temp-link_to_old_ssp,
+.temp-welcome-message > span > a,
+#welcomeDesciption a {
+    color: cornflowerblue;
+}
+#welcomeDesciptionContainer{
+    justify-content: flex-end;
+    position: relative;
+    display: flex;
+}
+
+#temp-link_to_old_ssp{
+    float: right;
+}
+
+#temp-welcome-messages {
+
+    margin-right: 40px;
+}
+
+.temp-welcome-message > span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5em;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+.temp-welcome-message {
+    margin-bottom: 20px;
+}
+/* Href */
+#ot-custom-lc {
+    height: 100%;
+    min-width: 115px;
+}
+
+#otc-nav-bar-content,
+#navcontent {
+    height: 100%;
+    flex-grow: 1;
+    min-width: 1px;
+    display: flex;
+    align-items: center;
+}
+
+#otc-guest-login-info,
+#otc-switch-lang-btn-container,
+.ot-custom-href {
+    cursor: pointer;
+    font-size: 14px;
+    /* margin-right: 20px; */
+    border: 1px solid transparent;
+    padding: 10px 10px 8px 10px;
+    background: white
+}
+[ot-custom-hidden-ref]{
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+}
+#ot-custom-extender-wrapper{
+    position: relative;
+    outline: 0px
+}
+#ot-custom-toggler-btn {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 17px;
+    cursor: pointer;
+    color: #0091EA;
+}
+.ot-custom-hidden-href-list-item{
+    display: block
+}
+#ot-custom-toggler-items {
+    position: absolute;
+    padding: 5px 0px;
+    border: 1px solid lightgrey;
+    background: white;
+    border-radius: 3px;
+    top: 40px;
+    transform: translateX(-40%);
+    z-index: 1;
+}
+
+#ot-custom-toggler-items > * {
+    text-decoration: none;
+    padding: 4px 12px;
+}
+
+#ot-custom-toggler-items > *:hover {
+    background: aliceblue
+}
+#ot-custom-lc-href{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* href=end */
+
+#ot-custom-new-ticket-form-title{
+    color:#e30613;
+    font-size:14px;
+}
+[title='OT_CUSTOM_BUNDLES'] + div.form-field-control-wrapper [name=wgc_div] {
+    border:none !important;
+    background: white;
+    height: auto !important;
+}
+[title='OT_CUSTOM_BUNDLES'] + div.form-field-control-wrapper .wgcRefStatus {
+    display: none;
+}
+#languageToggleContainer{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.ot-custom-large-grid{
+    width:100%;
+}
+#WelcomeToSSPHeader{
+    display: none
+}
+#otc-search-form-container .ot-custom-state-container{
+    display: none;
+}
+[otc-t=Link]:after{
+    content: "\F0AC";
+    font-family: awesome;
+    margin-left: 5px;
+}
+
+.SectionContentNoLabel>div{
+    margin: 0 1.5rem;
+}
+#sf > table > tbody > tr > .SFTableCell,
+#sf > table > tbody > tr > .SFTableCell > table > tbody > tr > .SFTableCell {
+    padding: 0px !important;
+}
+
+#otc-client-ip-wrapper {
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+    cursor: default
+}
+#otc-client-ip{
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+#otc-client-ip:hover{
+    border: 1px solid rgb(185, 185, 185);
+}
+[hide-title=Yes]{
+    display: none !important;
+}
+.otc-boolean-checkbox-href{
+    color: #0091ea;
+}
+.otc-resizer-space{
+    background: #f0f0f0;
+    border-top: 1px solid lightgrey;
+    text-align: center;
+}
+.otc-resizer-space:after {
+    content: "\F141";
+    font-family: awesome;
+    font-size: 14px;
+}
+#pnlPanes,
+#MainStatusBar_pnlMainStatusBar,
+#otc-initator-info{
+    display: none !important
+}
+
+#otc-web-request-wrapper{
+    display: none
+}
+/* new-navbar */
+
+#otc-logo-container_bzb{
+    min-width: 105px;
+}
+#otc-logo-container_bzb > a{
+    display: block;
+    height: 100%;
+}
+
+#otc-logout-btn-container{
+    position: relative;
+}
+
+div#otc-logout-menu-container > *:hover{
+    background: aliceblue
+}
+div#otc-logout-menu-container > *{
+    padding: 5px;
+    cursor: pointer
+}
+
+#otc-logout-menu-container {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-top: 5px;
+    padding: 5px 0px;
+    z-index: 1;
+}
+#otc-switch-lang-btn-container,
+#otc-logout-btn-container{
+    flex-shrink: 0
+}
+#otc-nav-bar-wrapper{
+    position: absolute;
+    left: 0;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    background-image: url(omnitracker.custom.min/img/ot_GDC-Logo.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: left !important;
+    background-position-x: 20px !important;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 0;
+    background: white;
+}
+.otc-lang-toggler{
+    color: inherit;
+    display: flex
+}
+
+/* v5 */
+
+.otc-control__wrapper{
+    display: flex
+}
+.otc-control__content-wrapper{
+    border-radius: 2px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    font-family: tahoma;
+    background-color: #fefefe;
+    font-size: 14px;
+}
+.otc-drop-down__list{
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    line-height: normal;
+    font-weight: normal;
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    border: 1px solid lightgrey;
+    background: white;
+    z-index: 1;
+}
+[otc-search-failed='true']{
+    background-color: rgb(255, 236, 236);
+}
+.otc-text__text-input-wrapper,
+.otc-drop-down__selected-items {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    font-size: 12px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.otc-control__state-container {
+    font-family: "awesome";
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin: 0px 6px;
+    min-width: 24px;
+}
+[otc-mandatory]:not([otc-mandatory='']) .otc-control__state-container::after{
+    content: "\F06A";
+    color: orange;
+}
+[otc-valid='true']::after{
+    content: "\F058" !important;
+    color: green !important;
+}
+.otc-drop-down__selected-items > *{
+    margin: 5px 5px 0px 0px;
+    display: flex;
+}
+
+.otc-text__text-input,
+.otc-month-selector__month-list,
+.otc-number__input,
+.otc-drop-down__selected-items > input{
+    font: inherit
+}
+.otc-selected-items__item {
+    border: 1px solid #cee0ed;
+    background-color: #f3faff;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #33658a;
+}
+.otc-text__text-input,
+.otc-selected-items__text-input {
+    border: 1px solid transparent;
+    flex-grow: 1;
+    padding: 4px 0px;
+    margin-right: 0px;
+    background: inherit;
+}
+.otc-drop-down{
+    position: relative;
+}
+.otc-text__text-input-wrapper:after,
+.otc-drop-down__selection-wrapper:after {
+    align-items: center;
+    font-family: awesome;
+    content: "\F0DC";
+    display: flex;
+    color: grey;
+    padding: 0px 5px;
+    /* font-size: 24px; */
+}
+.otc-drop-down__selection-wrapper{
+    display: flex
+}
+
+/* month-selector */
+
+.otc-month-selector-btn{
+    font-family: awesome;
+    color: grey;
+    padding: 0px 11px ;
+    font-size: 21px
+}
+.otc-month-selector-btn:hover{
+    background: lightgrey
+}
+.otc-month-selector__prev-btn::after{
+    content: "\F0d9"
+}
+.otc-month-selector__next-btn::after{
+    content: "\F0da"
+}
+
+.otc-time-input__wrapper,
+.otc-month-selector__selectors-container,
+.otc-month-selector,
+.otc-month-selector__content-container{
+    display: flex
+}
+.otc-drop-down__selection-wrapper.otc-date-picker__icon::after{
+    content: "\F073"
+}
+.otc-month-selector__content-container{
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+}
+.otc-number__input{
+    text-align: center;
+    border: 2px solid transparent;
+}
+.otc-number__input:hover{
+    border-bottom-color: lightskyblue
+}
+
+.otc-month-selector__year-container > .otc-number__input{
+    width: 40px
+}
+.otc-month-selector__month-list-container{
+    margin: 0px 5px ;
+    display: flex
+}
+.otc-date-picker__middle-container{
+    border-bottom: inherit;
+}
+.otc-date-picker__week-container{
+    display: flex;
+}
+.otc-date-picker__week-container > * {
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    display: flex;
+    cursor: default;
+    min-width: 16px;
+    position: relative;
+    flex-basis: 1px;
+    padding: 6px 0px
+}
+.otc-date-picker__middle-container > .otc-date-picker__week-container{
+    text-transform: uppercase;
+    color: #FF9A19;
+}
+.otc-date-picker__day-selector{
+    border-top: inherit;
+}
+.otc-date-picker__bottom-container {
+    align-items: center;
+    display: flex;
+    border: inherit;
+    border-width: 0px;
+    justify-content: space-around;
+    padding: 5px 0px;
+}
+.otc-date-picker__time-wrapper > input{
+    width: 30px;
+    text-align: center;
+    border: 0px;
+    background: transparent;
+    font-size: 15px;
+}
+.otc-date-picker__bottom-container > * {
+    width: 50%
+}
+.otc-time-input__wrapper > .otc-number__input{
+    width: 40px;
+}
+.otc-time-input__wrapper {
+    justify-content: center;
+    align-items: baseline
+}
+.otc-date-picker__now-btn{
+    text-align: center;
+    border-right: inherit;
+    border-width: 1px;
+    cursor: pointer;
+}
+.otc-date-picker__bottom-container > * {
+    padding: 5px 0px;
+}
+
+/* memo */
+.otc-memo{
+    border: inherit;
+    border-width: 0px;
+    position: relative;
+}
+.otc-memo__tools-container{
+    height: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    border-bottom: inherit;
+    padding-left: 3px;
+    background: #fdfdfd;
+    border-bottom-width: 1px;
+}
+.otc-memo__editor{
+    overflow-y: auto;
+    word-wrap: break-word;
+    min-height: 6em;
+    padding: 5px
+}
+
+/* unsorted */
+
+.otc-combo__items-container{
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.otc-combo__items-state{
+    padding: 5px 10px;
+    border-top: 1px solid lightgrey;
+    background-color: snow;
+    cursor: default;
+    font-size: 12px;
+}
+.otc-combo__items-container > div{
+    padding: 10px;
+    cursor: default;
+    font-size: 14px;
+}
+.otc-combo__items-container__item_hover{
+    background: aliceblue;
+}
+.otc-selected-items__remove-item-btn{
+    font-size: 20px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    background: #f3faff;
+    color: lightcoral;
+    font-family: awesome;
+    display: none;
+    padding: 0px 4px;
+}
+.otc-selected-items__clear-btn:hover,
+.otc-selected-items__remove-item-btn:hover{
+    color: red;
+}
+.otc-selected-items__remove-item-btn:after {  
+    content: "\F057";
+}
+.otc-selected-items__item{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.otc-selected-items__item:hover > .otc-selected-items__remove-item-btn{
+    display: block 
+}
+.otc-selected-items__clear-btn {
+    font-family: awesome;
+    font-size: 14px;
+    color: lightcoral;
+    display: flex;
+    align-items: center;
+}
+.otc-selected-items__clear-btn:after{
+    content: "\F273"
+}
+.otc-box__item{
+    padding: 5px;
+    font-size: 14px;
+}
+.otc-box__item:hover{
+    background: aliceblue
+}
+.otc-box__clear-btn-container{
+    border-top: 1px solid lightgray
+}
+.otc-box__clear-btn{
+    padding: 5px 10px;
+    cursor: pointer;
+    color: lightcoral
+}
+.otc-box__clear-btn:before {
+    content: "\F014";
+    font-family: awesome;
+    font-size: 14px;
+    margin-right: 5px;
+    /* padding: 10px; */
+}
+[forcombobox="true"]:after{
+    content: "\F014"
+}
+.otc-text__text-input-wrapper{
+    margin: 0px
+}
+.otc-text__text-input-wrapper::after{
+    content: ""
+}
+.otc-text__text-input{
+    padding: 9px 0px;
+}
+
+/* tree */
+
+.otc-tree-view__tree-item-container{
+    /* margin-left: 15px; */
+    /* border-left: 1px solid lightgray */
+}
+.otc-tree-view__tree-item-title-container{
+    overflow: hidden;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    text-overflow: clip;
+    flex-wrap: wrap;
+}
+.otc-tree-view__tree-item-title-container:hover{
+    background: aliceblue;
+    cursor: pointer
+}
+.otc-tree-view__tree-item-title-container:not([last])::before{
+    font-family: awesome;
+    content: "\F07C";
+    margin-right: 6px;
+    color: #b3b3b3
+}
+.otc-tree-view__tree-item-title-container:not([last]):hover:before{
+    color: #808080
+}
+.otc-tree-view__tree-item-title-container:not([last])[otc-childs-hidden="true"]::before{
+    content: "\F07B";
+    width: 15px
+}
+.otc-tree-view__tree-item-children-container {
+    border-left: 1px solid lightgrey;
+    margin-left: 20px;
+    
+}
+.otc-tree-view__tree-item-buttons-container{
+    display:flex;
+    margin-left: 12px;
+}
+
+.otc-tree-view__tree-item-rm,
+.otc-tree-view__tree-item-add{
+    display: none
+}
+.otc-tree-view__tree-item-rm:before,
+.otc-tree-view__tree-item-add:before {
+    font-family: awesome;
+    content: "\F055";
+    margin-right: 5px;
+    color: forestgreen;
+}
+
+.otc-tree-view__tree-item-add:hover{
+    color: forestgreen;
+}
+.otc-tree-view__tree-item-title-container[otc-tree-added="true"]:hover .otc-tree-view__tree-item-rm,
+.otc-tree-view__tree-item-title-container[otc-tree-added="false"]:hover .otc-tree-view__tree-item-add{
+    display: block
+}
+.otc-tree-view__tree-item-buttons-container > *{
+    margin: 0px 5px;
+}
+.otc-tree-view__tree-item-rm:before{
+    content: "\F056" !important;
+    color: lightcoral
+}
+.otc-tree-view__tree-item-rm:hover{
+    color: lightcoral
+}
+.otc-tree-view__tree-item-title-container[otc-tree-added="true"]:hover,
+[otc-tree-added="true"]{
+    background: #b1e7ea
+}
+.otc-tree-view__tree-item-nested-added-count[otc-tree-nested-shown=true]:after {
+    font-family: awesome;
+    content: "\F005";
+    color: green
+}
+.otc-tree-view__tree-item-nested-added-count{
+    min-width: 14px;
+    padding: 0px 5px
+}
+.otc-tree-view__tree-item-title-container > input{
+    margin-right: 8px
+}
+
+/* grid */
+
+.otc-grid__table-container {
+    text-align: center !important;
+    font-size: 14px;
+}
+
+.otc-grid__table {
+    width: 100%;
+    border-collapse: collapse;
+    /* text-align: center; */
+    /* font-size: 14px; */
+    text-align: inherit;
+    font: inherit;
+}
+
+
+.otc-grid__table tr > * {
+    padding: 8px 0px;
+    border-right: 1px solid lightgrey;
+    position: relative;
+}
+.otc-grid__table tr > *:nth-last-child(1){
+    border-right: 0px;
+}
+.otc-grid__table tr{
+    border-bottom: 1px solid lightgrey;
+}
+.otc-grid__table tr:hover{
+    background: aliceblue
+}
+
+/* .otc-grid__table > tbody>tr:nth-last-child(1){
+    border-bottom: 0px
+} */
+
+.otc-grid__checkbox-cell{
+    width: 20px;
+}
+.otc-grid__number-cell {
+    width: 20px;
+}
+.otc-grid__table td > input:not([type=checkbox]){
+    width: 100%;
+    border: 0px;
+    text-overflow: ellipsis;
+    background-color: transparent;
+    font: inherit;
+    padding: 7px
+}
+.otc-grid__table tr > td{
+    padding: 0px
+}
+.otc-grid__table th[mandatory="true"]:after {
+    font-family: awesome;
+    color: coral;
+    position: absolute;
+    margin-left: 5px;
+    content: "\F069";
+}
+.otc-grid__table tr > td .otc-control__state-container{
+    display: none
+}
+
+.otc-grid__table tr > td .otc-control__content-wrapper{
+    border-radius: 0px;
+    width: 100%;
+    border: 0px solid lightgrey;
+    font-family: tahoma;
+    background-color: transparent;
+    font-size: 14px;
+}
+.otc-grid__table tr > td .otc-drop-down__list{
+    left: 0;
+    right: 0;
+    min-width: 200px;
+}
+
+.otc-grid__table .otc-combo__items-container {
+    text-align: left;
+}
+
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+  }
+
+.otc-grid__buttons-container{
+    display: flex
+}
+.otc-grid__buttons-container > * {
+    flex-grow: 1;
+    padding: 5px 0px;
+}
+.otc-grid__add-row-btn {
+    border-right: 1px solid lightgrey;
+}
+.otc-grid__buttons-container > div:hover{
+    background: aliceblue
+}
+
+.otc-grid__buttons-container > div:before {
+    font-family: awesome;
+    margin-right: 4px
+}
+.otc-grid__add-row-btn::before{
+    content: "\F055";
+    
+}
+.otc-grid__remove-row-btn::before{
+    content: "\F014";
+}
+
+.otc-grid__table th[mandatory="true"][validation-result="true"]:after {
+    color: forestgreen;
+}
