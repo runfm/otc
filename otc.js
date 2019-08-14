@@ -71,6 +71,7 @@ var otCustom = {
         RelationsKeyValueDelimiter: ":~:",
         GridTextValueDelimiter: ":!~:",
         GridRowDelimiter: ":@@:",
+        GridColumnDelimiter: ":@:",
         sfPlaceholder: "Начните набирать текст вашего запроса",
         SSPFieldNamePrefix: "SPOINT_FIELD-"
     },
@@ -1595,6 +1596,28 @@ var otCustom = {
             Controls.Control.call(this, params);
             var self = this;
             this.TValue = []
+            this.columnsHashTable = {}
+
+            Object.defineProperty(this, "value", {
+                get: GetValue,
+                set: function (value) {
+                    this.Clear();
+                    var JSONStringValue = "[{\"" + value.replace(/:@@:/gmi, "\"},{\"").replace(/:!~:/gmi, "\":\"").replace(/:@:/gmi, "\",\"") + "\"}]"
+                    this.TValue = JSON.parse(JSONStringValue)
+                    for(var i = 0 ; i < this.TValue.length; i++){
+                        var dataSet = this.TValue[i]
+                        var newRow = this.insertRow(dataSet)
+                        for(var k in dataSet){
+                            var columnIdx = this.columnsHashTable[k]
+                            newRow.cells[columnIdx].customInput.value = dataSet[k]
+                        }
+                    }
+                }
+            });
+
+            for(var i = 0; i < this.columns.length; i++)
+                this.columnsHashTable[this.columns[i].UID] = i + 2
+
             this.contentContainer = this.contentWrapper.createChild({
                 className: "otc-grid__table-container",
                 eventListeners: {
@@ -1604,10 +1627,6 @@ var otCustom = {
                 }
             });
 
-            this.dataTable = this.contentContainer.createChild({
-                tagName: "table",
-                className: "otc-grid__table"
-            });
             this.buttonsContainer = this.contentContainer.createChild("otc-grid__buttons-container");
             this.addRowBtn = this.buttonsContainer.createChild({
                 className: "otc-grid__add-row-btn",
@@ -1618,6 +1637,11 @@ var otCustom = {
                 textContent: "Удалить"
             })
 
+            this.dataTable = this.contentContainer.createChild({
+                tagName: "table",
+                className: "otc-grid__table"
+            });
+
             this.dataTableBody = this.dataTable.createTBody();
             this.insertHeaderRow();
             /* this.insertRow() */
@@ -1626,12 +1650,15 @@ var otCustom = {
         Grid.prototype = Object.create(Controls.Control.prototype);
         Grid.prototype.constructor = Grid;
 
-        Grid.prototype.insertRow = function () {
-            var self = this
+        Grid.prototype.insertRow = function (rowDataSet) {
+            var self = this;
+
+            var onChangeFunction = function (e) {
+                OnGrid__CustomInputChange.call(self, e)
+            }
+
             var newRow = this.dataTable.insertRow()
-            var newRowDataSet = {}
-            this.TValue.push(newRowDataSet)
-            newRow.objectData = newRowDataSet
+            newRow.objectData = rowDataSet
             var checkBoxCell = newRow.insertCell()
             checkBoxCell.className = "otc-grid__checkbox-cell"
             checkBoxCell.createChild({
@@ -1650,32 +1677,27 @@ var otCustom = {
                         newDataCell.customInput = newDataCell.createChild({
                             tagName: "input",
                             eventListeners: {
-                                change: function (e) {
-                                    OnGrid__CustomInputChange.call(self, e)
-                                }
+                                change: onChangeFunction
                             }
                         });
                         break;
                     case "Date":
                         newDataCell.customInput = new otCustom.Controls.Date({
                             container: newDataCell,
-                            onChange: function (e) {
-                                OnGrid__CustomInputChange.call(self, e)
-                            }
+                            onChange: onChangeFunction
                         })
                         break;
                     case "Choice":
                         newDataCell.customInput = new otCustom.Controls.ComboBox({
                             container: newDataCell,
                             dataSource: this.columns[i].dataSource,
-                            onChange: function (e) {
-                                OnGrid__CustomInputChange.call(self, e)
-                            }
+                            onChange: onChangeFunction
                         });
                     default:
                         break;
                 }
             }
+            return newRow;
         }
 
         Grid.prototype.insertHeaderRow = function () {
@@ -1744,41 +1766,56 @@ var otCustom = {
         }
 
         Grid.prototype.UpdateValue = function () {
+            this.SetIsValid(this.CheckAllColumnsValidation())
             var stringifiedRowValues = []
             for (var i = 0; i < this.TValue.length; i++) {
-                for (var k in this.TValue[i]) {
-                    stringifiedRowValues.push(k + otCustom.Settings.GridTextValueDelimiter + this.TValue[i][k])
-                }
+                var stringifiedColumnValues = []
+                for (var k in this.TValue[i])
+                    stringifiedColumnValues.push(k + otCustom.Settings.GridTextValueDelimiter + this.TValue[i][k])
+                var stringifiedRowValue = stringifiedColumnValues.join(otCustom.Settings.GridColumnDelimiter)
+                if(stringifiedRowValue)
+                    stringifiedRowValues.push(stringifiedRowValue)
             }
-            this.SetIsValid(this.CheckAllColumnsValidation())
             this.SetValue(stringifiedRowValues.join(otCustom.Settings.GridRowDelimiter))
+        }
+
+        Grid.prototype.DeleteRow = function (row) {
+            var objectDataIdx = this.TValue.indexOf(row.objectData)
+            this.TValue.splice(objectDataIdx, 1)
+            this.dataTable.deleteRow(row.rowIndex)
+        }
+
+        Grid.prototype.Clear = function () {
+            var rows = this.dataTable.rows
+            while (this.dataTable.rows.length > 1)
+                this.DeleteRow(rows[1])
+            this.UpdateValue()
         }
 
         function OnGrid__ContainerClick(e) {
             if (e.target == this.addRowBtn) {
-                this.insertRow()
+                //Вставить строку
+                var newRowDataSet = {}
+                this.TValue.push(newRowDataSet)
+                this.insertRow(newRowDataSet)
                 this.UpdateValue()
             }
             if (e.target.className == "otc-grid__checkbox-cell") {
+                //кликнуть по чекбоксу если кликнули по родительскому контейнеру
                 e.target.firstElementChild.click()
             }
             if (e.target.type == "checkbox" && e.target.parentElement.parentElement.rowIndex == 0) {
+                //Выделить  чекбоксы в строках (или снять выделение) если чекбокс в заголовке checked (unchecked)
                 var checkBoxes = this.dataTable.querySelectorAll("tr:not(:first-child) input[type=checkbox]")
-                for (var i = 0; i < checkBoxes.length; i++) {
+                for (var i = 0; i < checkBoxes.length; i++)
                     checkBoxes[i].checked = e.target.checked
-                }
             }
             if (e.target == this.removeRowBtn) {
+                //Удалить строки, выделенные чекбоксами
                 var checkBoxes = this.dataTable.querySelectorAll("tr:not(:first-child) input[type=checkbox]:checked")
-                for (var i = 0; i < checkBoxes.length; i++) {
-                    var rowForDeletion = checkBoxes[i].parentElement.parentElement
-                    var objectDataIdx = this.TValue.indexOf(rowForDeletion.objectData)
-
-                    this.TValue.splice(objectDataIdx, 1)
-                    this.dataTable.deleteRow(rowForDeletion.rowIndex)
-                    this.headerRow.cells[0].firstElementChild.checked = false
-                }
-
+                for (var i = 0; i < checkBoxes.length; i++)
+                    this.DeleteRow(checkBoxes[i].parentElement.parentElement)
+                this.headerRow.cells[0].firstElementChild.checked = false
                 for (var i = 1; i < this.dataTable.rows.length; i++) // Актуализация номера строки в разметке 
                     this.dataTable.rows[i].cells[1].textContent = i
                 this.UpdateValue()

@@ -1778,6 +1778,7 @@ div#otc-logout-menu-container > *{
 .otc-grid__table tr > *:nth-last-child(1){
     border-right: 0px;
 }
+.otc-grid__buttons-container,
 .otc-grid__table tr{
     border-bottom: 1px solid lightgrey;
 }
@@ -1785,9 +1786,9 @@ div#otc-logout-menu-container > *{
     background: aliceblue
 }
 
-/* .otc-grid__table > tbody>tr:nth-last-child(1){
+.otc-grid__table > tbody>tr:nth-last-child(1){
     border-bottom: 0px
-} */
+}
 
 .otc-grid__checkbox-cell{
     width: 20px;
@@ -1844,8 +1845,7 @@ html {
     display: flex
 }
 .otc-grid__buttons-container > * {
-    flex-grow: 1;
-    padding: 5px 0px;
+    padding: 8px;
 }
 .otc-grid__add-row-btn {
     border-right: 1px solid lightgrey;
