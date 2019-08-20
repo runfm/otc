@@ -1595,12 +1595,14 @@ var otCustom = {
         function Grid(params) {
             Controls.Control.call(this, params);
             var self = this;
-            this.TValue = []
+            this.TValue = [];
+            this.bulk = false; //Если true - значение поля не обновляется. Позволяет обновить сразу несколько значений грида
             this.columnsHashTable = {}
 
             Object.defineProperty(this, "value", {
                 get: GetValue,
                 set: function (value) {
+                    this.bulk = true
                     this.Clear();
                     var JSONStringValue = "[{\"" + value.replace(/:@@:/gmi, "\"},{\"").replace(/:!~:/gmi, "\":\"").replace(/:@:/gmi, "\",\"") + "\"}]"
                     this.TValue = JSON.parse(JSONStringValue)
@@ -1612,6 +1614,8 @@ var otCustom = {
                             newRow.cells[columnIdx].customInput.value = dataSet[k]
                         }
                     }
+                    this.bulk = false;
+                    this.UpdateValue()
                 }
             });
 
@@ -1833,8 +1837,8 @@ var otCustom = {
                 parent.parentElement.objectData[columnSettings.UID] = cellValue
             else
                 delete parent.parentElement.objectData[columnSettings.UID]
-
-            this.UpdateValue()
+            if(!this.bulk)
+                this.UpdateValue()
         }
 
         Controls.Grid = Grid
